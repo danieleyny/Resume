@@ -9,10 +9,12 @@
     /*========== Colors ==========*/
     --title-color: #0B0A0A;
     --text-color: #403A3A;
+    --text-color2: #707070;
     --text-color-light: #707070;
     --container-color: #FAFAFA;
     --container-color-alt: #F0EFEF;
     --body-color: #FCFCFC;
+    --custom-font-color: rgb(107, 99, 99);
   
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
@@ -48,16 +50,113 @@ html{
 }
 
     /*=== Variables Dark Theme ===*/
+body.dark-theme {
+    --title-color: #F2F2F2;
+    --text-color: #BFBFBF;
+    --text-color2: #d1c7c7;
+    --container-color: #212121;
+    --container-color-alt: #181616;
+    --body-color: #2B2B2B;
+    --custom-font-color: #BFBFBF;
+}
 
 
     /*=== Button Dark/Light ===*/
+.change-theme{
+    position: absolute;
+    right: 0;
+    top: 2.2rem;
+    display: flex;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
 
+.change-theme:hover{
+    color: var(--title-color);
+}
 
     /*=== Font size variables to scale cv ===*/
+    body.scale-cv{
+    --h1-font-size: .938rem;
+    --h2-font-size: .938rem;
+    --h3-font-size: .875rem;
+    --normal-font-size: .813rem;
+    --small-font-size: .75rem;
+    --smaller-font-size: .688rem;
+    }
+
 
     /*=== Generate PDF button ===*/
+.generate-pdf{
+    display: none;
+    position: absolute;
+    top: 2.2rem;
+    left: 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.generate-pdf:hover{
+    color: var(--title-color);
+}
 
     /*=== Classes modified to reduce size and print on A4 sheet===*/
+.scale-cv .change-theme,
+.scale-cv .generate-pdf{
+    display: none;
+}
+
+.scale-cv .bd-container{
+    max-width: 595px;
+}
+
+.scale-cv .section{
+    padding: 1.5rem 0 .80rem;
+}
+
+.scale-cv .section-title{
+    margin-bottom: .75rem;
+}
+
+.scale-cv .resume__left,
+.scale-cv .resume__right{
+    padding: 0 1rem;
+}
+
+.scale-cv ,.home__img{
+    width: 90px;
+    height: 90px;
+}
+
+.scale-cv .home__container{
+    gap: 1.5rem;
+}
+
+.scale-cv .home__data{
+    gap: .25rem;
+}
+
+.scale-cv .home__address,
+.scale-cv .social__container{
+    gap: .75rem;
+}
+
+.scale-cv .home__icon,
+.scale-cv .social__icon,
+.scale-cv .interests__icon{
+    font-size: 1rem;
+}
+
+.scale-cv .education__container,
+.scale-cv .experience__container,
+.scale-cv .certificate__container{
+    gap: 1rem;
+}
+
+
+
 body{
     margin: 0 0 var(--header-height) 0;
     padding: 0;
@@ -83,7 +182,7 @@ ul{
 
 a{
     text-decoration: none;
-    color: rgb(107, 99, 99);
+    color: var(--custom-font-color);
     font-weight: 100;
     font-size: 1rem;
     font-family: 'Poppins2', sans-serif;
@@ -205,7 +304,7 @@ img{
 }
 
 .home__address{
-    color: rgb(107, 99, 99);
+    color: var(--custom-font-color);
     font-weight: 100;
     font-size: 1rem;
     font-family: 'Poppins2', sans-serif;
@@ -235,6 +334,10 @@ img{
     margin-bottom: var(--mb-1);
 }
 
+.home__img:hover{
+    box-shadow: 0px 0px 50px rgb(124, 196, 201);
+}
+
 .home__information{
     display: flex;
     align-items: center;
@@ -244,6 +347,18 @@ img{
 .home__icon{
     font-size: 1.2rem;
     margin-right: .25rem;
+}
+
+.home__email{
+    display: flex;
+    align-items: center;
+    font-size: var(--small-font-size);
+}
+
+.home__phone{
+    display: flex;
+    align-items: center;
+    font-size: var(--small-font-size);
 }
 
 .home__button-movil{
@@ -289,7 +404,7 @@ img{
 /*== Profiles ==*/
 .profile__description{
     text-align: center;
-    color: rgb(107, 99, 99);
+    color: var(--custom-font-color);
     font-family: 'Poppins2', sans-serif;
     font-weight: 100;
 
@@ -299,7 +414,7 @@ img{
 
 /*== Education and Experience ==*/
 .education__fonts {
-    color: rgb(107, 99, 99);
+    color: var(--custom-font-color);
     font-family: 'Poppins2', sans-serif;
     font-weight: 100;
 }
@@ -348,7 +463,7 @@ img{
 .education__studies,
 .experience__company{
     font-size: var(--smaller-font-size);
-    color: rgb(107, 99, 99);
+    color: var(--custom-font-color);
 }
 
 .education__year{
@@ -360,7 +475,7 @@ img{
 
 .skills__fonts,
 .languages__content {
-    color: rgb(107, 99, 99);
+    color: var(--custom-font-color);
     font-family: 'Poppins2', sans-serif;
     font-weight: 100;
 }
@@ -394,7 +509,7 @@ img{
 
 
 .experience__font{
-    color: rgb(107, 99, 99);
+    color: var(--custom-font-color);
     font-family: 'Poppins2', sans-serif;
     font-weight: 100;
 }
@@ -417,7 +532,7 @@ img{
 }
 
 .references__subtitle{
-    color: var(--text-color-light);
+    color: var(--text-color2);
     font-size: .8rem;
     font-weight: 100;
     font-family: 'Poppins2', sans-serif;
@@ -427,7 +542,23 @@ img{
     font-family: 'Poppins2', sans-serif;
     font-weight: 100;
     letter-spacing: .07rem;
-    color: var(--text-color-light);
+    color: var(--text-color2);
+    font-size: .8rem;
+}
+
+.references__email {
+    font-family: 'Poppins2', sans-serif;
+    font-weight: 100;
+    letter-spacing: .07rem;
+    color: var(--text-color2);
+    font-size: .8rem;
+}
+
+.references__phone{
+    font-family: 'Poppins2', sans-serif;
+    font-weight: 100;
+    letter-spacing: .07rem;
+    color: var(--text-color2);
     font-size: .8rem;
 }
 
@@ -448,7 +579,7 @@ img{
 }
 
 .interests__name{
-    color: var(--text-color-light);
+    color: var(--text-color2);
 }
 
 .interests__icon{
@@ -516,13 +647,17 @@ img{
         background-color: var(--container-color);
         box-shadow: 0 0 8px rgba(13,12,12,.15);
     }
-    resume__left{
+    .resume__left{
         background-color: var(--container-color-alt);
     }
 
     .resume__left,
     .resume__right{
         padding: 0 1.5rem;
+    }
+
+    .generate-pdf{
+        display: inline-block;
     }
 
     .section-title, 
