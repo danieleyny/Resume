@@ -152,31 +152,36 @@ body.dark-theme {
 
 .scale-cv .education__container,
 .scale-cv .experience__container,
+.scale-cv .project__container.
 .scale-cv .certificate__container{
     gap: 1rem;
 }
 
 .scale-cv .education__time,
-.scale-cv .experience__time{
+.scale-cv .experience__time,
+.scale-cv .project__time{
     padding-right: .5rem;
 }
 
 .scale-cv .education__rounder,
-.scale-cv .experience__rounder{
+.scale-cv .experience__rounder,
+.scale-cv .project__rounder{
     width: 11px;
     height: 11px;
     margin-top: .22rem;
 }
 
 .scale-cv .education__line,
-.scale-cv .experience__line{
+.scale-cv .experience__line,
+.scale-cv .project__line{
     width: 1px;
     height: 110%;
     transition: translate(5px, 0);
 }
 
 .scale-cv .education__data,
-.scale-cv .experience__data{
+.scale-cv .experience__data,
+.scale-cv .project__data{
     margin-bottom: var(--mb-1);
 }
 
@@ -451,17 +456,20 @@ img{
 }
 
 .education__content, 
-.experience__content{
+.experience__content,
+.project__content{
     display: flex;
 }
 
 .education__time,
-.experience__time{
+.experience__time,
+.project__time{
     padding-right: 1REM;
 }
 
 .education__rounder,
-.experience__rounder{
+.experience__rounder,
+.project__rounder{
     position: relative;
     display: block;
     width: 16px;
@@ -472,7 +480,8 @@ img{
 }
 
 .education__line,
-.experience__line{
+.experience__line,
+.project__line{
     display: block;
     width: 2px;
     height: 110%;
@@ -481,18 +490,21 @@ img{
 }
 
 .education__data,
-.experience__data {
+.experience__data,
+.project__data {
     gap: .5rem;
 
 }
 
 .education__title,
-.experience__title{
+.experience__title,
+.project__title{
     font-size: var(--h3-font-size);
 }
 
 .education__studies,
-.experience__company{
+.experience__company
+.project__company{
     font-size: var(--smaller-font-size);
     color: var(--custom-font-color);
 }
@@ -539,7 +551,8 @@ img{
 
 
 
-.experience__font{
+.experience__font,
+.project__font{
     color: var(--custom-font-color);
     font-family: 'Poppins2', sans-serif;
     font-weight: 100;
