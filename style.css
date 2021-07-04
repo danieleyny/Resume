@@ -558,6 +558,13 @@ img{
     font-weight: 100;
 }
 
+.link {
+    letter-spacing: normal;
+    color: rgb(92, 92, 206);
+    font-weight: bold;
+}
+
+
 /* == Certificates == */
 .certificate__title {
     font-size: var(--h3-font-size);
